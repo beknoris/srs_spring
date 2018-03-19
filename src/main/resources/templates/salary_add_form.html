@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Salary page</title>
+    <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <form action="#" th:action="@{/salary/add}" th:object = "${salary}" method="POST">
+                <label for="salary">Salary</label>
+                <input type="text" id="salary" name="salary" th:field = "*{salary}" class="form-control" placeholder=" енгіз" />
+
+                <br/>
+                <button type="submit" class="btn btn-primary">Сақтау</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script th:src = "@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</body>
+</html>
